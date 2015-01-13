@@ -6,10 +6,17 @@
 <body>
 {{#Scrollview}}
   {{#famousEach items}}
-    {{#Surface size="[undefined,50]"}}
-      <div class="listItem">{{first_name}}</div>
-    {{/Surface}}
+    {{>Surface 
+      template="card"
+      size="[300,50]"
+      origin="[0.5,0.5]"
+      align="[0.5,0]"
+    }}
   {{/famousEach}}
 {{/Scrollview}}
 </body>
+
+<template name="card">
+  <hr />{{first_name}} {{surname}}<hr />
+</template>
 

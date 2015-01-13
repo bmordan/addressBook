@@ -14,3 +14,9 @@ Template.body.helpers({
     return Contacts.findAll()
   }
 })
+
+Template.card.events({
+  'click': function(event, template){
+    console.log(this._id)
+  }
+})

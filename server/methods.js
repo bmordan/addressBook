@@ -74,5 +74,20 @@ Meteor.methods({
         updatedAt: contact.updatedAt
       })
     })
+  },
+  addOne: function(){
+    Contacts.insert({
+      first_name: "Peter",
+      surname: "Newman",
+      address: "13 UpperRandom st",
+      phone_number: "12312123",
+      email: "some@email.com",
+      id: 1234,
+      createdAt: new Date().getTime(),
+      updatedAt: new Date().getTime()      
+    })
+  },
+  clear: function(){
+    Contacts.remove({})
   }
 })
